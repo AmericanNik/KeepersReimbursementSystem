@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name>ArsenioReimbursementSystem</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  
+  
+  <!-- Forwarding Master Servlet Configurations -->
+  
+  <servlet>
+  	<display-name>ForwardingMasterServlet</display-name>
+  	<servlet-name>ForwardingMasterServlet</servlet-name>
+  	<servlet-class>com.ArsenioReimbursementSystem.servlet.ForwardingMasterServlet</servlet-class>	
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ForwardingMasterServlet</servlet-name>
+  	<url-pattern>/forwarding/*</url-pattern>
+  	<url-pattern>*.forward</url-pattern>
+  </servlet-mapping>
+  
+  
+  <!-- JSON Master Servlet Configurations -->
+  
+    	 <!-- JSON MASTER SERVLET CONFIGURATIONS -->
+    <servlet>
+  	<display-name>JsonMasterServlet</display-name>
+  	<servlet-name>JsonMasterServlet</servlet-name>
+  	<servlet-class>com.ArsenioReimbursementSystem.json.JsonMasterServlet</servlet-class>
+ 	 </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>JsonMasterServlet</servlet-name>
+  	<url-pattern>/json/*</url-pattern>
+  	<url-pattern>*.json</url-pattern>	 	
+  </servlet-mapping>
+  
+  
+  
+  <servlet>
+  	<servlet-name>SessionServlet</servlet-name>
+  	<servlet-class>com.ArsenioReimbursementSystem.sessionservlet.SessionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>SessionServlet</servlet-name>
+  	<url-pattern>/ses</url-pattern>
+  </servlet-mapping>
+  
+  
+    <!-- Forwarding Master GENERAL CATCH ALL Servlet Configurations -->
+  
+<!--   <servlet>
+  	<display-name>ForwardingMasterServlet</display-name>
+  	<servlet-name>ForwardingMasterServlet</servlet-name>
+  	<servlet-class>com.ArsenioReimbursementSystem.servlet.ForwardingMasterServlet</servlet-class>	
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ForwardingMasterServlet</servlet-name>
+  	<url-pattern>/forwarding/*</url-pattern>
+  	<url-pattern>*.forward</url-pattern>
+  </servlet-mapping> -->
+  
+  
+
+  
+</web-app>
